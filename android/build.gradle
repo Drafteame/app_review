@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.3'
+        classpath 'com.android.tools.build:gradle:3.2.0'
     }
 }
 
@@ -22,16 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 34
-
-    if (project.android.hasProperty("namespace")) {
-      namespace 'com.appleeducate.appreview'
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 16
@@ -40,10 +31,9 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
-
 }
 
 dependencies {
     api 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.google.android.play:core:1.8.2'
 }

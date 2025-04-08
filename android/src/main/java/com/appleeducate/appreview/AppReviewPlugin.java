@@ -21,7 +21,6 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** AppReviewPlugin */
 public class AppReviewPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware {
@@ -38,11 +37,6 @@ public class AppReviewPlugin implements FlutterPlugin, MethodCallHandler, Activi
   }
 
   /** Plugin registration. */
-  public static void registerWith(Registrar registrar) {
-    AppReviewPlugin simplePermissionsPlugin = new AppReviewPlugin();
-    simplePermissionsPlugin.setupChannel(registrar.messenger());
-    //    registrar.addRequestPermissionsResultListener(simplePermissionsPlugin);
-  }
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {

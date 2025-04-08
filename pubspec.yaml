@@ -1,6 +1,6 @@
 name: app_review
 description: Request and Write Reviews and Open Store Listing for Android and iOS in Flutter.
-version: 4.2.0
+version: 4.3.0
 maintainer: Draftea (@drafteame)
 repository: https://github.com/fluttercommunity/app_review
 
